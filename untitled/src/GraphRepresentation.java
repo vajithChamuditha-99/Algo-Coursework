@@ -21,19 +21,19 @@ public class GraphRepresentation {
         System.out.println();
         for (int i = 0; i < vertex; i++) {
             for (int j = 0; j <vertex ; j++) {
-                System.out.print(matrixDisplay[i][j]+ " ");
+                System.out.print(matrixDisplay[i][j]+ "   ");
             }
             System.out.println();
         }
-        /*for (int i = 0; i < vertex; i++) {
-            System.out.print("Vertex " + (i+1) + " is connected to:");
-            for (int j = 0; j <vertex ; j++) {
-                if(matrixDisplay[i][j]==1){
-                    System.out.print(j + " ");
-                }
-            }
-            System.out.println();
-        }*/
+//        for (int i = 0; i < vertex; i++) {
+//            System.out.print("Vertex " + (i+1) + " is connected to:");
+//            for (int j = 0; j <vertex ; j++) {
+//                if(matrixDisplay[i][j]==1){
+//                    System.out.print(j + " ");
+//                }
+//            }
+//            System.out.println();
+//        }
     }
 
     public static void main(String[] args) {
@@ -49,17 +49,6 @@ public class GraphRepresentation {
 
         graph.addGraphEdge(2, 3,5);
 
-//        graph.addEdge(2, 5,0);
-//
-//        graph.addEdge(3, 5,0);
-//
-//        graph.addEdge(4, 6,0);
-//
-//        graph.addEdge(5, 2,0);
-//
-//        graph.addEdge(5, 4,0);
-//
-//        graph.addEdge(5, 6,0);
 
 
         graph.displayGraph();
