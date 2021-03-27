@@ -1,3 +1,8 @@
+/**
+ *
+ * @author vajith
+ */
+
 public class GraphRepresentation {
     int[][] matrixDisplay;
     int vertex;
@@ -48,7 +53,6 @@ public class GraphRepresentation {
         graph.addGraphEdge(1, 3,3);
 
         graph.addGraphEdge(2, 3,5);
-
 
 
         graph.displayGraph();

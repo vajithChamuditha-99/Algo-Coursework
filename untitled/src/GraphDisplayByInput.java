@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/**
+ *
+ * @author vajith
+ */
+
 public class GraphDisplayByInput {
     int[][] matrixDisplay;
     int vertex;
@@ -35,21 +40,21 @@ public class GraphDisplayByInput {
     }
 
     public static void main(String[] args) {
-        System.out.println("Enter no of vertices");
+        System.out.println("Enter no of vertices: ");
         Scanner scanner=new Scanner(System.in);
         int i= scanner.nextInt();
         GraphDisplayByInput graph = new GraphDisplayByInput(i);
         int mm=(i-1);
         int max=mm*i; //max number of edges
         for (int j=0;j<max;j++){
-            System.out.println("Enter source /n Want to exit press 9999");
+            System.out.println("Enter source (Want to exit press 9999) : ");
             int k= scanner.nextInt();
             if (k==9999){
                 break;
             }else {
-                System.out.println("Enter target");
+                System.out.println("Enter target: ");
                 int l= scanner.nextInt();
-                System.out.println("Enter capacity");
+                System.out.println("Enter capacity: ");
                 int m= scanner.nextInt();
                 graph.addGraphEdge((k-1), (l-1),(m));
             }
