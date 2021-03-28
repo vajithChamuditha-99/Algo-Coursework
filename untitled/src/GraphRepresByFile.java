@@ -50,7 +50,7 @@ public class GraphRepresByFile {
                 int val=Integer.parseInt(lines[0]);
                 int val2=Integer.parseInt(lines[1]);
                 int val3=Integer.parseInt(lines[2]);
-                System.out.println("Connected from "+(val+1)+" to "+(val2+1)+", capacity: "+val3);
+                System.out.println("Connected from "+(val)+" to "+(val2)+", capacity: "+val3);
                 graphRepresByFile.addGraphEdge((val),(val2),val3);
             }
             graphRepresByFile.displayGraph();

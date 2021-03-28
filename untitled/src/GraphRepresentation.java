@@ -10,6 +10,7 @@ public class GraphRepresentation {
 
     public GraphRepresentation(int vertex) {
         this.vertex = vertex;
+        //initializing the 2d array
         matrixDisplay = new int[vertex][vertex];
     }
 
@@ -30,15 +31,6 @@ public class GraphRepresentation {
             }
             System.out.println();
         }
-//        for (int i = 0; i < vertex; i++) {
-//            System.out.print("Vertex " + (i+1) + " is connected to:");
-//            for (int j = 0; j <vertex ; j++) {
-//                if(matrixDisplay[i][j]==1){
-//                    System.out.print(j + " ");
-//                }
-//            }
-//            System.out.println();
-//        }
     }
 
     public static void main(String[] args) {

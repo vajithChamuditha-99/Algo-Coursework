@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6c070a7-c8a7-4016-8e84-afceaf79ca66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/hp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/hp.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled/GraphDisplayByInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GraphDisplayByInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled/GraphRepresByFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GraphRepresByFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled/GraphRepresentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GraphRepresentation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/1Kints.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlowNetwork.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphDisplayByInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphDisplayByInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphRepresByFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphRepresByFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphRepresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphRepresentation.java" afterDir="false" />
@@ -48,14 +47,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.GraphRepresByFile">
-    <configuration name="FlowNetwork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FlowNetwork" />
-      <module name="untitled" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MaxFlow_Ford_Fulkerson">
     <configuration name="GraphDisplayByInput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GraphDisplayByInput" />
       <module name="untitled" />
@@ -70,8 +62,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphRepresentation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GraphRepresentation" />
+    <configuration name="MaxFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MaxFlow" />
+      <module name="untitled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxFlow_Ford_Fulkerson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MaxFlow_Ford_Fulkerson" />
+      <module name="untitled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaximumFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MaximumFlow" />
       <module name="untitled" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,10 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GraphRepresByFile" />
+        <item itemvalue="Application.MaxFlow_Ford_Fulkerson" />
+        <item itemvalue="Application.MaximumFlow" />
         <item itemvalue="Application.GraphDisplayByInput" />
-        <item itemvalue="Application.GraphRepresentation" />
-        <item itemvalue="Application.FlowNetwork" />
+        <item itemvalue="Application.MaxFlow" />
+        <item itemvalue="Application.GraphRepresByFile" />
       </list>
     </recent_temporary>
   </component>
@@ -101,37 +108,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task 03 started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 03 started" />
+    <MESSAGE value="Task 03 Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 03 Done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616847866988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616847866988" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1616692626254">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1616848275898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1616692626254" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1616848275898" />
     <state x="389" y="105" key="FileChooserDialogImpl" timestamp="1614015094328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="389" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614015094328" />
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1616846978704">
+    <state width="1323" height="226" key="GridCell.Tab.0.bottom" timestamp="1616939544875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616846978704" />
-    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1616846978704">
+    <state width="1323" height="226" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616939544875" />
+    <state width="1323" height="226" key="GridCell.Tab.0.center" timestamp="1616939544875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616846978704" />
-    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1616846978704">
+    <state width="1323" height="226" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616939544875" />
+    <state width="1323" height="226" key="GridCell.Tab.0.left" timestamp="1616939544875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616846978704" />
-    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1616846978704">
+    <state width="1323" height="226" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616939544875" />
+    <state width="1323" height="226" key="GridCell.Tab.0.right" timestamp="1616939544875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616846978704" />
+    <state width="1323" height="226" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616939544875" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1616847898164">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
