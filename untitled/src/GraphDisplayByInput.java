@@ -3,6 +3,8 @@ import java.util.Scanner;
 /**
  *
  * @author vajith
+ *
+ * TASK :- 02 - USER_INPUT
  */
 
 public class GraphDisplayByInput {

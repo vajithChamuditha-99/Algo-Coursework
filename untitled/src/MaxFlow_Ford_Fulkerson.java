@@ -92,7 +92,7 @@ public class MaxFlow_Ford_Fulkerson {
 
 
     public static void main(String[] args) {
-        int vertices = 4;
+        int vertices = 10;
 //        int[][] graph = { {0, 10, 8, 0, 0, 0},
 //                {0, 0, 5, 5, 0, 0},
 //                {0, 4, 0, 0, 10, 0},
@@ -108,15 +108,23 @@ public class MaxFlow_Ford_Fulkerson {
 //                {0, 0, 0, 7, 0, 4},
 //                {0, 0, 0, 0, 0, 0}
 //        };
-        int graph[][] =new int[][] { {0, 6, 4, 0},
-                {0, 0, 2, 3},
-                {0, 0, 0, 5},
-                {0, 0, 0, 0},
+        int graph[][] =new int[][] {
+                {0 ,  1 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  8 ,  0 },
+                {0 ,  0 ,  1 ,  0 ,  0 ,  0 ,  0 ,  6 ,  0 ,  8},
+                {0 ,  0 ,  0 ,  1 ,  0 ,  0 ,  4 ,  0 ,  6 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  4 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0},
+
 
         };
         MaxFlow_Ford_Fulkerson g = new MaxFlow_Ford_Fulkerson(vertices, graph);
-        int source = 0;
-        int destination = 3;
+        int source = 2;
+        int destination = 6;
         int max_flow = g.findMaxFlow(source,destination);
         System.out.println("Maximum flow from source: " + source + " to destination: " + destination
                 + " is: " + max_flow);

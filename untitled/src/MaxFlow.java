@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 class MaxFlow
 {
-    static final int V = 6;    //Number of vertices in graph
+    static final int V = 10;    //Number of vertices in graph
 
     /* Returns true if there is a path from source 's' to sink
       't' in residual graph. Also fills parent[] to store the
@@ -106,17 +106,31 @@ class MaxFlow
     public static void main (String[] args) throws java.lang.Exception
     {
         // Let us create a graph shown in the above example
-        int graph[][] =new int[][] { {0, 16, 13, 0, 0, 0},
-                {0, 0, 10, 12, 0, 0},
-                {0, 4, 0, 0, 14, 0},
-                {0, 0, 9, 0, 0, 20},
-                {0, 0, 0, 7, 0, 4},
-                {0, 0, 0, 0, 0, 0}
+//        int graph[][] =new int[][] { {0, 16, 13, 0, 0, 0},
+//                {0, 0, 10, 12, 0, 0},
+//                {0, 4, 0, 0, 14, 0},
+//                {0, 0, 9, 0, 0, 20},
+//                {0, 0, 0, 7, 0, 4},
+//                {0, 0, 0, 0, 0, 0}
+//        };
+        int graph[][] =new int[][] {
+                {0 ,  1 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  8 ,  0 },
+                {0 ,  0 ,  1 ,  0 ,  0 ,  0 ,  0 ,  6 ,  0 ,  8},
+                {0 ,  0 ,  0 ,  1 ,  0 ,  0 ,  4 ,  0 ,  6 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  4 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0},
+
+
         };
         MaxFlow m = new MaxFlow();
 
         System.out.println("The maximum possible flow is " +
-                m.fordFulkerson(graph, 0, 3));
+                m.fordFulkerson(graph, 2, 6));
 
     }
 }
