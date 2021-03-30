@@ -36,16 +36,16 @@ public class MaximumFlow {
             System.arraycopy(matrixDisplay[i], 0, residualGraphMatrix[i], 0, noOfVertices);
         }
         //initialize array to store the paths
-        int [] pathStoT = new int[noOfVertices];
+        int [] parentNodes = new int[noOfVertices];
         //initializing variable to store maximum flow
         int maximumFlow = 0;
-        while(pathSearchBFS(residualGraphMatrix, source, target, pathStoT)){
+        while(pathSearchBFS(residualGraphMatrix, source, target, parentNodes)){
             //checking the path is available from source to destination
             //pathStoT array will have the source to destination path
             int flowStore = Integer.MAX_VALUE;
             int targetNode = target;
             while(targetNode!=source){
-                int sourceNode = pathStoT[targetNode];
+                int sourceNode = parentNodes[targetNode];
                 //find the maximum flow which can be passed through the path (finding the minimum residual capacity)
                 flowStore = Math.min(flowStore, residualGraphMatrix[sourceNode][targetNode]);
                 targetNode = sourceNode;
@@ -53,7 +53,7 @@ public class MaximumFlow {
             targetNode = target;
             while(targetNode!=source){
                 //updating the residual graph array
-                int sourceNode = pathStoT[targetNode];
+                int sourceNode = parentNodes[targetNode];
                 //reduce the flowStore capacity from the forward edge
                 residualGraphMatrix[sourceNode][targetNode]-=flowStore;
                 //add the flowStore capacity for the backward edge
@@ -65,7 +65,7 @@ public class MaximumFlow {
         }
         return maximumFlow;
     }
-    public boolean pathSearchBFS(int [][] residualGraph, int sourceNode, int sinkNode, int [] path){
+    public boolean pathSearchBFS(int [][] residualGraph, int sourceNode, int sinkNode, int [] parentArr){
         //initializing an array to store visited nodes
         boolean [] visited_nodes = new boolean[noOfVertices];
         //mark all the nodes as not visited
@@ -76,7 +76,7 @@ public class MaximumFlow {
         //visiting the node and change the boolean value to true to inform that is visited add it to queue
         visited_nodes[sourceNode] = true;
         BFS_queue.add(sourceNode);
-        path[sourceNode] = -1;
+        parentArr[sourceNode] = -1;
         while(!BFS_queue.isEmpty()){
             //removing the first element in the queue
             int element_u = BFS_queue.poll();
@@ -87,14 +87,16 @@ public class MaximumFlow {
                     //visiting the node and change the boolean value to true to inform that is visited add it to queue
                     visited_nodes[element_v] = true;
                     BFS_queue.add(element_v);
-                    path[element_v] = element_u;
+                    parentArr[element_v] = element_u;
                 }
             }
         }
-        boolean pathIsThere;
         //check if destination is reached during BFS
-        pathIsThere = visited_nodes[sinkNode];
-        return pathIsThere;
+        if (visited_nodes[sinkNode]){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public void displayGraph() {
@@ -133,7 +135,7 @@ public class MaximumFlow {
             }
             maximumFlow.displayGraph();
             int source = 0;
-            int destination = 3;
+            int destination = noOfVertices-1;
             System.out.println();
             int max_flow = maximumFlow.findMaxFlow(source,destination);
             System.out.println("Maximum possible flow from source: " + source + " to destination: " + destination

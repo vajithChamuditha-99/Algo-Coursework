@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6c070a7-c8a7-4016-8e84-afceaf79ca66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/hp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/hp.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/GraphDisplayByInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GraphDisplayByInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/GraphRepresByFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GraphRepresByFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/GraphRepresentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GraphRepresentation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphDisplayByInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphDisplayByInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphRepresByFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphRepresByFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphRepresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphRepresentation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MaxFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MaxFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MaxFlow_Ford_Fulkerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MaxFlow_Ford_Fulkerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MaximumFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MaximumFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,22 +122,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="389" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614015094328" />
-    <state width="1323" height="312" key="GridCell.Tab.0.bottom" timestamp="1617038221923">
+    <state width="611" height="307" key="GridCell.Tab.0.bottom" timestamp="1617091382595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617038221923" />
-    <state width="1323" height="312" key="GridCell.Tab.0.center" timestamp="1617038221923">
+    <state width="611" height="307" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617091382595" />
+    <state width="611" height="307" key="GridCell.Tab.0.center" timestamp="1617091382595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617038221923" />
-    <state width="1323" height="312" key="GridCell.Tab.0.left" timestamp="1617038221923">
+    <state width="611" height="307" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617091382595" />
+    <state width="611" height="307" key="GridCell.Tab.0.left" timestamp="1617091382595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617038221923" />
-    <state width="1323" height="312" key="GridCell.Tab.0.right" timestamp="1617038221923">
+    <state width="611" height="307" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617091382595" />
+    <state width="611" height="307" key="GridCell.Tab.0.right" timestamp="1617091382595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617038221923" />
+    <state width="611" height="307" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617091382595" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1616847898164">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
