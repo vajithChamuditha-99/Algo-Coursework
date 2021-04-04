@@ -10,6 +10,9 @@ public class MaxFlow_Ford_Fulkerson {
         this.vertices = vertex;
         this.graph = graph;
     }
+    public MaxFlow_Ford_Fulkerson() {
+    }
+
 
     public int findMaxFlow(int source, int sink) {
         //residual graph
@@ -89,9 +92,20 @@ public class MaxFlow_Ford_Fulkerson {
         pathFound = visited[dest];
         return pathFound;
     }
+    public void displayGraph() {
+        System.out.println("Graph Representation: Adjacency Matrix");
+        System.out.println();
+        for (int i = 0; i < vertices; i++) {
+            for (int j = 0; j <vertices ; j++) {
+                System.out.print(graph[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
 
 
     public static void main(String[] args) {
+        Stopwatch stopwatch=new Stopwatch();
         int vertices = 10;
 //        int[][] graph = { {0, 10, 8, 0, 0, 0},
 //                {0, 0, 5, 5, 0, 0},
@@ -113,20 +127,23 @@ public class MaxFlow_Ford_Fulkerson {
                 {0 ,  0 ,  1 ,  0 ,  0 ,  0 ,  0 ,  6 ,  0 ,  8},
                 {0 ,  0 ,  0 ,  1 ,  0 ,  0 ,  4 ,  0 ,  6 ,  0},
                 {0 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  4 ,  0 ,  0},
-                {0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  0 ,  0},
-                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0 ,  0},
-                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0},
+                {0 ,  30 ,  0 ,  0 ,  0 ,  1 ,  2 ,  0 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  20 ,  0 ,  0 ,  1 ,  0 ,  0 ,  0},
+                {0 ,  0 ,  0 ,  10 ,  0 ,  0 ,  0 ,  1 ,  0 ,  0},
                 {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1 ,  0},
-                {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1},
+                {0 ,  0 ,  0 ,  0 ,  0 ,  10 ,  0 ,  0 ,  0 ,  1},
                 {0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0},
 
 
         };
         MaxFlow_Ford_Fulkerson g = new MaxFlow_Ford_Fulkerson(vertices, graph);
-        int source = 2;
-        int destination = 6;
+        int source = 0;
+        int destination = 9;
+        MaxFlow_Ford_Fulkerson m=new MaxFlow_Ford_Fulkerson();
+        m.displayGraph();
         int max_flow = g.findMaxFlow(source,destination);
         System.out.println("Maximum flow from source: " + source + " to destination: " + destination
                 + " is: " + max_flow);
+        System.out.println("Time taken "+stopwatch.elapsedTime());
     }
 }

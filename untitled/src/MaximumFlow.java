@@ -17,6 +17,10 @@ import java.util.Scanner;
 public class MaximumFlow {
     int[][] matrixDisplay;
     private static int noOfVertices;
+    private static double sTime;
+    private static double eTime;
+    private static int count;
+    private static Stopwatch stopwatch1=new Stopwatch();
 
     public MaximumFlow() {
         //initializing the 2d array for the matrix
@@ -41,13 +45,13 @@ public class MaximumFlow {
         int maximumFlow = 0;
         while(pathSearchBFS(residualGraphMatrix, source, target, parentNodes)){
             //checking the path is available from source to destination
-            //pathStoT array will have the source to destination path
             int flowStore = Integer.MAX_VALUE;
             int targetNode = target;
             while(targetNode!=source){
                 int sourceNode = parentNodes[targetNode];
                 //find the maximum flow which can be passed through the path (finding the minimum residual capacity)
                 flowStore = Math.min(flowStore, residualGraphMatrix[sourceNode][targetNode]);
+                //System.out.println("Total flow calculated is "+flowStore+ " by path "+ sourceNode+" to "  + targetNode);
                 targetNode = sourceNode;
             }
             targetNode = target;
@@ -61,9 +65,13 @@ public class MaximumFlow {
                 targetNode = sourceNode;
             }
             //updating the maximum flow by adding flowStore
+            int currMaxFlow=maximumFlow;
             maximumFlow+=flowStore;
+            System.out.println("Current flow: " + currMaxFlow +" + " +flowStore +" = "+ maximumFlow);
         }
+        eTime=stopwatch1.elapsedTime();
         return maximumFlow;
+
     }
     public boolean pathSearchBFS(int [][] residualGraph, int sourceNode, int sinkNode, int [] parentArr){
         //initializing an array to store visited nodes
@@ -102,7 +110,6 @@ public class MaximumFlow {
     public void displayGraph() {
         System.out.println();
         System.out.println("Graph Representation: Adjacency Matrix");
-        System.out.println();
         //printing the graph as matrix horizontally and vertically
         for (int i = 0; i < noOfVertices; i++) {
             for (int j = 0; j <noOfVertices ; j++) {
@@ -110,19 +117,21 @@ public class MaximumFlow {
             }
             System.out.println();
         }
+        System.out.println();
     }
     public static void calculate() {
         try {
+
             Scanner scanner=new Scanner(chooseFile());
             //reading the first line of the file and adding it to an array
             String[] lineOne=scanner.nextLine().trim().split(" ");
             //convert it to integer
             noOfVertices=Integer.parseInt(lineOne[0]);
-            System.out.println("Number of vertices: "+noOfVertices);
             System.out.println();
             MaximumFlow maximumFlow=new MaximumFlow();
             //reading the next lines in the text file
             while(scanner.hasNext()){
+                count++;
                 //adding the read values from text to a string array
                 String[] linesOfTheText=scanner.nextLine().trim().split( " ");
                 //parsing the array values to variables as integers
@@ -136,11 +145,12 @@ public class MaximumFlow {
             maximumFlow.displayGraph();
             int source = 0;
             int destination = noOfVertices-1;
-            System.out.println();
+            sTime=stopwatch1.elapsedTime();
             int max_flow = maximumFlow.findMaxFlow(source,destination);
+            System.out.println("Number of Edges: "+count);
+            System.out.println("Number of Vertices: "+noOfVertices);
             System.out.println("Maximum possible flow from source: " + source + " to destination: " + destination
                     + " is: " + max_flow);
-            System.out.println();
         }catch (FileNotFoundException | NoSuchElementException | NumberFormatException fe){
             //for catch errors
             System.out.println("File not found to import Data or Issue with the data!!!...");
@@ -157,8 +167,10 @@ public class MaximumFlow {
     }
 
     public static void main(String[] args)  {
+        //Stopwatch stopwatch=new Stopwatch();
         calculate();
-        System.out.println();
+        double elapsedTime=(eTime-sTime);
+        System.out.println("Time taken: "+elapsedTime+ " seconds.");
     }
 }
 

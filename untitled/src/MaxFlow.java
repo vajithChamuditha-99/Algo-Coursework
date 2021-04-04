@@ -71,11 +71,11 @@ class MaxFlow
 
         int max_flow = 0;  // There is no flow initially
 
-        // Augment the flow while tere is path from source
+        // Augment the flow while there is path from source
         // to sink
         while (bfs(rGraph, s, t, parent))
         {
-            // Find minimum residual capacity of the edhes
+            // Find minimum residual capacity of the edges
             // along the path filled by BFS. Or we can say
             // find the maximum flow through the path found.
             int path_flow = Integer.MAX_VALUE;
