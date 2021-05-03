@@ -17,13 +17,11 @@ import java.util.Scanner;
 public class MaximumFlow {
     int[][] matrixDisplay;
     private static int noOfVertices;
-    private static double sTime;
-    private static double eTime;
     private static int count;
 
     public MaximumFlow() {
         //initializing the 2d array for the matrix
-         matrixDisplay = new int[noOfVertices][noOfVertices];
+        matrixDisplay = new int[noOfVertices][noOfVertices];
     }
 
     public void addGraphEdge(int source, int target,int capacity) {
@@ -47,43 +45,32 @@ public class MaximumFlow {
             //checking the path is available from source to destination
             int flowStore = Integer.MAX_VALUE;
             int targetNode = target;
-//            while(targetNode!=source){
-//                int sourceNode = parentNodes[targetNode];
-//                //find the maximum flow which can be passed through the path (finding the minimum residual capacity)
-//                flowStore = Math.min(flowStore, residualGraphMatrix[sourceNode][targetNode]);
-//                //System.out.println("Total flow calculated is "+flowStore+ " by path "+ sourceNode+" to "  + targetNode);
-//                targetNode = sourceNode;
-//            }
-//            targetNode = target;
-//            while(targetNode!=source){
-//                //updating the residual graph array
-//                int sourceNode = parentNodes[targetNode];
-//                //reduce the flowStore capacity from the forward edge
-//                residualGraphMatrix[sourceNode][targetNode]-=flowStore;
-//                //add the flowStore capacity for the backward edge
-//                residualGraphMatrix[targetNode][sourceNode]+=flowStore;
-//                targetNode = sourceNode;
-//            }
-            while (pathSearchBFS(residualGraphMatrix,source,target,parentNodes )) {
-                for (source = s; target != source; target = parentNodes[target]) {
-                    u = parent[v];
-                    flowStore = Math.min(flowStore, residualGraphMatrix[source][target]);
-                }
-                for (v = destination; v != source; v = parent[v]) {
-                    u = parent[v];
-                    residualGraph[u][v] -= pathFlow;
-                    residualGraph[v][u] += pathFlow;
-                }
-                maxFlow += pathFlow;
+            while(targetNode!=source){
+                int sourceNode = parentNodes[targetNode];
+                //find the maximum flow which can be passed through the path (finding the minimum residual capacity)
+                flowStore = Math.min(flowStore, residualGraphMatrix[sourceNode][targetNode]);
+                //System.out.println("Total flow calculated is "+flowStore+ " by path "+ sourceNode+" to "  + targetNode);
+                targetNode = sourceNode;
+            }
+            targetNode = target;
+            while(targetNode!=source){
+                //updating the residual graph array
+                int sourceNode = parentNodes[targetNode];
+                //reduce the flowStore capacity from the forward edge
+                residualGraphMatrix[sourceNode][targetNode]-=flowStore;
+                //add the flowStore capacity for the backward edge
+                residualGraphMatrix[targetNode][sourceNode]+=flowStore;
+                targetNode = sourceNode;
             }
             //updating the maximum flow by adding flowStore
             int currMaxFlow=maximumFlow;
             maximumFlow+=flowStore;
             System.out.println("Current flow: " + currMaxFlow +" + " +flowStore +" = "+ maximumFlow);
         }
-        eTime=stopwatch1.elapsedTime();
+        double elapsedTime=stopwatch1.elapsedTime();
+        System.out.println("Time taken: "+elapsedTime+ " seconds.");
+        //System.out.println("tt"+ stopwatch1.elapsedTime()*1000000);
         return maximumFlow;
-
     }
     public boolean pathSearchBFS(int [][] residualGraph, int sourceNode, int sinkNode, int [] parentArr){
         //initializing an array to store visited nodes
@@ -162,7 +149,7 @@ public class MaximumFlow {
             System.out.println("Number of Vertices: "+noOfVertices);
             System.out.println("Maximum possible flow from source: " + source + " to destination: " + destination
                     + " is: " + max_flow);
-        }catch (FileNotFoundException | NoSuchElementException | NumberFormatException fe){
+        }catch (FileNotFoundException | NoSuchElementException | NumberFormatException | ArrayIndexOutOfBoundsException fe){
             //for catch errors
             System.out.println("File not found to import Data or Issue with the data!!!...");
         }
@@ -180,8 +167,7 @@ public class MaximumFlow {
     public static void main(String[] args)  {
         //Stopwatch stopwatch=new Stopwatch();
         calculate();
-        double elapsedTime=(eTime-sTime);
-        System.out.println("Time taken: "+elapsedTime+ " seconds.");
+
     }
 }
 
